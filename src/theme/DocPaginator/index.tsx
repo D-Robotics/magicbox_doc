@@ -7,7 +7,9 @@ import type {Props} from '@theme/DocPaginator';
 const getCustomTitle = (permalink: string, locale: string): string | null => {
   const rules = {
     en: [
-      // s100
+      // magicbox
+      { pattern: /^\/magicbox_doc\/en\/algorithm-development$/, title: '5. Algorithm Development' },
+     
 
     ],
     // zh: [
@@ -19,11 +21,9 @@ const getCustomTitle = (permalink: string, locale: string): string | null => {
   };
 
   const localeRules = rules[locale as keyof typeof rules] || rules.en;
-  const matchedRule = localeRules.find((rule: { pattern: RegExp; title: string }) => rule.pattern.test(permalink));
-  return matchedRule ? (matchedRule as { title: string }).title : null;
+  const matchedRule = localeRules.find(rule => rule.pattern.test(permalink));
+  return matchedRule ? matchedRule.title : null;
 };
-
-import type { JSX } from 'react';
 
 export default function DocPaginatorWrapper(props: Props): JSX.Element {
   const { pathname } = useLocation();

@@ -1,6 +1,6 @@
 English| [简体中文](./README_CN.md)
 
-Welcome to this project! This document will help you quickly get started with the installation, development, building, and deployment of RDK_DOC.
+Welcome to this project! This document will help you quickly get started with the installation, development, building, and deployment of Magicbox_DOC.
 
 ### I. Environment Installation
 
