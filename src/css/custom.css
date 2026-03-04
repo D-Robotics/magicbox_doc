@@ -45,3 +45,19 @@
   font-size: 0.9em;
   color: #999;
 }
+
+
+.markdown table {
+  width: 100%;
+  display: table; /* 覆盖默认的 display: block */
+}
+
+/* 确保表格容器也占满宽度 */
+.markdown {
+  width: 100%;
+}
+
+/* 文档内容区域 */
+.theme-doc-markdown {
+  margin-bottom: 30px;
+}
