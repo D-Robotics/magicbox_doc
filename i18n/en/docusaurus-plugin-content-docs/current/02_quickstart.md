@@ -23,7 +23,7 @@ To avoid malfunction or damage to this product, please adhere to the following g
 ## Quick Start Guide Video
 
 <video controls width="90%" preload="metadata">
-  <source src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/magicbox.mp4" />
+  <source src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/magicbox-en.mp4" />
   Your browser does not support the video tag.
 </video>
 
