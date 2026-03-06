@@ -71,32 +71,32 @@ jobs:
           ossutil version
           
       # 4. 上传到阿里云OSS
-- name: Upload to OSS
-  env:
-    OSS_ACCESS_KEY_ID: ${{ secrets.OSS_ACCESS_KEY_ID }}
-    OSS_ACCESS_KEY_SECRET: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
-    
-  run: |
-    cd ./downloaded-artifact
-    
-    echo "=== 准备上传以下文件 ==="
-    ls -la
-    echo "文件总数: $(find . -type f | wc -l)"
-    
-    # 方法1：使用 sudo -E 保留环境变量
-    echo "=== 测试 OSS 连接 ==="
-    sudo -E ossutil ls oss://cn-rdk-front-prod/ \
-      -e https://d-robotics.cc \
-      -i $OSS_ACCESS_KEY_ID \
-      -k $OSS_ACCESS_KEY_SECRET \
-      --region cn-beijing || echo "❌ OSS 连接测试失败"
-    
-    # 上传文件
-    echo "=== 开始上传文件 ==="
-    sudo -E ossutil cp -r . oss://cn-rdk-front-prod/magicbox_doc/ \
-      -e https://d-robotics.cc \
-      -i $OSS_ACCESS_KEY_ID \
-      -k $OSS_ACCESS_KEY_SECRET \
-      --region cn-beijing \
-      --update \
-      --retry-times=3
+      - name: Upload to OSS
+        env:
+          OSS_ACCESS_KEY_ID: ${{ secrets.OSS_ACCESS_KEY_ID }}
+          OSS_ACCESS_KEY_SECRET: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
+          
+        run: |
+          cd ./downloaded-artifact
+          
+          echo "=== 准备上传以下文件 ==="
+          ls -la
+          echo "文件总数: $(find . -type f | wc -l)"
+          
+          # 方法1：使用 sudo -E 保留环境变量
+          echo "=== 测试 OSS 连接 ==="
+          sudo -E ossutil ls oss://cn-rdk-front-prod/ \
+            -e https://d-robotics.cc \
+            -i $OSS_ACCESS_KEY_ID \
+            -k $OSS_ACCESS_KEY_SECRET \
+            --region cn-beijing || echo "❌ OSS 连接测试失败"
+          
+          # 上传文件
+          echo "=== 开始上传文件 ==="
+          sudo -E ossutil cp -r . oss://cn-rdk-front-prod/magicbox_doc/ \
+            -e https://d-robotics.cc \
+            -i $OSS_ACCESS_KEY_ID \
+            -k $OSS_ACCESS_KEY_SECRET \
+            --region cn-beijing \
+            --update \
+            --retry-times=3
