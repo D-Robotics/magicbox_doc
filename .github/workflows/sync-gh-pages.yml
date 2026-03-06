@@ -1,100 +1,44 @@
-name: Sync to Aliyun OSS
+name: Sync gh-pages to OSS
 
 on:
-  # 监听第一个工作流成功完成
   workflow_run:
-    workflows: ["Deploy Docusaurus site to GitHub Pages"]
+    workflows: ["Deploy Docusaurus site to GitHub Pages"]  # deploy.yml workflow 名称
     types:
       - completed
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  actions: read  # 添加这个权限
+  workflow_dispatch: # 允许手动触发
 
 jobs:
-  sync-to-oss:
-    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+  sync-gh-pages:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
-    
+
     steps:
-      # 1. 下载第一个工作流构建的 Artifact
-      - name: Download build artifact
-        uses: actions/download-artifact@v4
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v3
         with:
-          name: github-pages  # upload-pages-artifact 默认上传的 artifact 名称
-          path: ./downloaded-artifact
-          run-id: ${{ github.event.workflow_run.id }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          
-      # 2. 解压 Artifact
-      - name: Extract artifact
-        run: |
-          cd ./downloaded-artifact
-          
-          # 查看下载的文件
-          echo "下载的文件："
-          ls -la
-          
-          # 直接解压 artifact.tar
-          if [ -f "artifact.tar" ]; then
-              echo "找到 artifact.tar，开始解压..."
-              tar -xf artifact.tar
-              echo "解压完成"
-          else
-              echo "❌ 找不到 artifact.tar 文件"
-              exit 1
-          fi
-          
-          # 显示解压后的内容
-          echo "解压后的目录内容："
-          ls -la
-          
-          # 确认是否解压出了网页文件
-          if [ -f "index.html" ]; then
-              echo "✅ 成功找到 index.html"
-          else
-              echo "⚠️ 当前目录下的文件："
-              find . -type f -name "*.html" | head -10
-          fi
-          
-          
-          
-      # 3. 安装 ossutil v2
+          ref: gh-pages
+          fetch-depth: 0   # 拉取完整历史，保证可以 push
+
       - name: Setup ossutil v2
         run: |
+          # 下载并设置 ossutil v2
           curl -o ossutil.zip https://gosspublic.alicdn.com/ossutil/v2/2.1.2/ossutil-2.1.2-linux-amd64.zip
-          unzip -q ossutil.zip
+          unzip ossutil.zip
           cd ossutil-2.1.2-linux-amd64
           chmod 755 ossutil
-          sudo mv ossutil /usr/local/bin/
+          mv ossutil /usr/local/bin/ && sudo ln -s /usr/local/bin/ossutil /usr/bin/ossutil
           ossutil version
-          
-      - name: Upload to OSS
+
+      - name: Upload to OSS via Custom Domain
         env:
           OSS_ACCESS_KEY_ID: ${{ secrets.OSS_ACCESS_KEY_ID }}
           OSS_ACCESS_KEY_SECRET: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
         run: |
-          cd ./downloaded-artifact
-          
-          echo "=== 准备上传以下文件 ==="
-          ls -la
-          echo "文件总数: $(find . -type f | wc -l)"
-          
-          # 测试 OSS 连接（不加 sudo）
-          echo "=== 测试 OSS 连接 ==="
-          ossutil ls oss://cn-rdk-front-prod/ \
-            -e https://d-robotics.cc \
-            -i $OSS_ACCESS_KEY_ID \
-            -k $OSS_ACCESS_KEY_SECRET \
-            --region cn-beijing
-          
-          # 上传文件（不加 sudo）
-          echo "=== 开始上传文件 ==="
-          ossutil cp -r . oss://cn-rdk-front-prod/magicbox_doc/ \
-            -e https://d-robotics.cc \
-            -i $OSS_ACCESS_KEY_ID \
-            -k $OSS_ACCESS_KEY_SECRET \
-            --region cn-beijing \
-            --update \
-            --retry-times=3
+          # 直接使用命令行参数，避免配置步骤
+          sudo ossutil cp -r . oss://cn-rdk-front-prod/magicbox_doc/ \
+          -e https://d-robotics.cc \
+          -i $OSS_ACCESS_KEY_ID \
+          -k $OSS_ACCESS_KEY_SECRET \
+          --region cn-beijing \
+          --update \
+          --retry-times=3
