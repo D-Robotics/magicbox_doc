@@ -31,12 +31,48 @@ jobs:
       - name: Extract artifact
         run: |
           cd ./downloaded-artifact
-          # github-pages artifact 是一个 tar.gz 文件
-          tar -xzf *.tar.gz
-          # 解压后得到 artifact.tar
-          tar -xf artifact.tar
-          # 现在当前目录就是构建好的静态文件
+          
+          # 列出下载的文件
+          echo "下载的文件："
           ls -la
+          
+          # 处理可能不同的文件名
+          # 解压任何 .tar.gz 或 .tgz 文件
+          if ls *.tar.gz 1> /dev/null 2>&1; then
+              echo "找到 tar.gz 文件，开始第一次解压..."
+              tar -xzf *.tar.gz
+          elif ls *.tgz 1> /dev/null 2>&1; then
+              echo "找到 tgz 文件，开始第一次解压..."
+              tar -xzf *.tgz
+          else
+              echo "❌ 找不到 .tar.gz 或 .tgz 文件"
+              exit 1
+          fi
+          
+          # 第二次解压：处理内部的 tar 文件
+          if [ -f "artifact.tar" ]; then
+              echo "找到 artifact.tar，开始第二次解压..."
+              tar -xf artifact.tar
+          elif ls *.tar 1> /dev/null 2>&1; then
+              TAR_FILE=$(ls *.tar | head -1)
+              echo "找到 $TAR_FILE，开始第二次解压..."
+              tar -xf "$TAR_FILE"
+          else
+              echo "❌ 找不到任何 tar 文件"
+              exit 1
+          fi
+          
+          # 显示最终结果
+          echo "最终解压后的目录内容："
+          ls -la
+          
+          # 确认是否解压出了网页文件
+          if [ -f "index.html" ]; then
+              echo "✅ 成功找到 index.html"
+          else
+              echo "⚠️ 警告：没有找到 index.html，可能解压不完整"
+              find . -type f -name "*.html" | head -5
+          fi
           
       # 3. 安装 ossutil v2
       - name: Setup ossutil v2
