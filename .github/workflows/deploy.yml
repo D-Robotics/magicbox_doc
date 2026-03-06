@@ -1,3 +1,5 @@
+name: Deploy Docusaurus site to GitHub Pages
+
 on:
   push:
     branches: [main] # 推送到 main 时自动部署
