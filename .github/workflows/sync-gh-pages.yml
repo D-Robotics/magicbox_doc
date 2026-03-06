@@ -19,7 +19,7 @@ jobs:
           ref: gh-pages
           fetch-depth: 0   # 拉取完整历史，保证可以 push
 
-      - name: name: Setup ossutil v2
+      - name: Setup ossutil v2
         run: |
           # 下载并设置 ossutil v2
           curl -o ossutil.zip https://gosspublic.alicdn.com/ossutil/v2/2.1.2/ossutil-2.1.2-linux-amd64.zip
