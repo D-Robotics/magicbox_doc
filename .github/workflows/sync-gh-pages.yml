@@ -27,52 +27,38 @@ jobs:
           run-id: ${{ github.event.workflow_run.id }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           
-      # 2. 正确解压 Artifact
+      # 2. 解压 Artifact
       - name: Extract artifact
         run: |
           cd ./downloaded-artifact
           
-          # 列出下载的文件
+          # 查看下载的文件
           echo "下载的文件："
           ls -la
           
-          # 处理可能不同的文件名
-          # 解压任何 .tar.gz 或 .tgz 文件
-          if ls *.tar.gz 1> /dev/null 2>&1; then
-              echo "找到 tar.gz 文件，开始第一次解压..."
-              tar -xzf *.tar.gz
-          elif ls *.tgz 1> /dev/null 2>&1; then
-              echo "找到 tgz 文件，开始第一次解压..."
-              tar -xzf *.tgz
-          else
-              echo "❌ 找不到 .tar.gz 或 .tgz 文件"
-              exit 1
-          fi
-          
-          # 第二次解压：处理内部的 tar 文件
+          # 直接解压 artifact.tar
           if [ -f "artifact.tar" ]; then
-              echo "找到 artifact.tar，开始第二次解压..."
+              echo "找到 artifact.tar，开始解压..."
               tar -xf artifact.tar
-          elif ls *.tar 1> /dev/null 2>&1; then
-              TAR_FILE=$(ls *.tar | head -1)
-              echo "找到 $TAR_FILE，开始第二次解压..."
-              tar -xf "$TAR_FILE"
+              echo "解压完成"
           else
-              echo "❌ 找不到任何 tar 文件"
+              echo "❌ 找不到 artifact.tar 文件"
               exit 1
           fi
           
-          # 显示最终结果
-          echo "最终解压后的目录内容："
+          # 显示解压后的内容
+          echo "解压后的目录内容："
           ls -la
           
           # 确认是否解压出了网页文件
           if [ -f "index.html" ]; then
               echo "✅ 成功找到 index.html"
           else
-              echo "⚠️ 警告：没有找到 index.html，可能解压不完整"
-              find . -type f -name "*.html" | head -5
+              echo "⚠️ 当前目录下的文件："
+              find . -type f -name "*.html" | head -10
           fi
+          
+          
           
       # 3. 安装 ossutil v2
       - name: Setup ossutil v2
