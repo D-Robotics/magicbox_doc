@@ -5,7 +5,6 @@ on:
     workflows: ["Deploy Docusaurus site to GitHub Pages"]  # deploy.yml workflow 名称
     types:
       - completed
-  workflow_dispatch: # 允许手动触发
 
 jobs:
   sync-gh-pages:
@@ -28,6 +27,7 @@ jobs:
           chmod 755 ossutil
           mv ossutil /usr/local/bin/ && sudo ln -s /usr/local/bin/ossutil /usr/bin/ossutil
           ossutil version
+
       - name: Upload to OSS via Custom Domain
         env:
           OSS_ACCESS_KEY_ID: ${{ secrets.OSS_ACCESS_KEY_ID }}
