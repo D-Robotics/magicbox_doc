@@ -1,8 +1,8 @@
 ---
-sidebar_position: 7
+sidebar_position: 8
 ---
 
-# 7. Changelog
+# 8. Changelog
 
   <table>
     <thead>

@@ -1,8 +1,8 @@
 ---
-sidebar_position: 7
+sidebar_position: 8
 ---
 
-# 7. 更新日志
+# 8. 更新日志
 
 
   <table>

@@ -1,8 +1,8 @@
 ---
-sidebar_position: 8
+sidebar_position: 9
 ---
 
-# 8. Technical Support
+# 9. Technical Support
 
 If you encounter any issues during use, you can get help through the following channels:
 
