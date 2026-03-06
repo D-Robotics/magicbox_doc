@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkmagicbox_doc=globalThis.webpackChunkmagicbox_doc||[]).push([[3356],{3356(c,a,e){e.d(a,{createInfoServices:()=>o.v});var o=e(2963);e(808)}}]);

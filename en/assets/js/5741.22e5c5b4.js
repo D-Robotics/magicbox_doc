@@ -1,0 +1,1 @@
+(globalThis.webpackChunkmagicbox_doc=globalThis.webpackChunkmagicbox_doc||[]).push([[5741],{5741(){}}]);
