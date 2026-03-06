@@ -32,6 +32,11 @@ jobs:
         echo "GIT_USER: ${{ secrets.GITHUB_ACTOR }}"
         echo "GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}"
         echo "GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}"
+
+    - name: Set up Git config
+      run: |
+        git config --global user.email "2560288119@qq.com"
+        git config --global user.name "liqinglian01"
         
     - name: Setup SSH
       run: |
