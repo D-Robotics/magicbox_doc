@@ -20,6 +20,24 @@ sidebar_position: 2
 - RDK X5 Magicbox，内置 32GB TF卡
 - 数据线：A-to-C x1, C-to-C x1
 
+## 系统烧录
+
+:::warning 注意
+
+RDK X5 Magicbox 出厂已预置 RDK OS，可参考 [快速上手指导视频](#快速上手指导视频) 直接体验。如有重新烧录需求，请按以下步骤拆卸 SD 卡，进行系统烧录。
+
+:::
+
+1. 使用螺丝刀按逆时针方向拧下两颗挡板固定螺丝，打开 SD 卡挡板。
+2. 拆卸 SD 卡进行系统烧录，烧录步骤参考 [系统烧录](https://developer.d-robotics.cc/rdk_doc/Quick_start/install_os/rdk_x5)。
+3. 烧录完成后将 SD 卡重新插入 Magicbox 内部 SD 卡槽，安装挡板，拧紧两颗挡板固定螺丝。
+
+    ![系统烧录](https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/sd_card_install_os.jpg)
+
+
+
+
+
 ## 快速上手指导视频
 
 <video controls width="90%" preload="metadata">
@@ -175,3 +193,4 @@ systemctl disable magicbox-start
 上电后自启动资源监控功能，使用闪连配置网络时浏览器访问 http://192.168.128.10:7999 ，使用有线网口配置网络时浏览器访问 http://192.168.127.10:7999 ，即可查看 CPU，BPU 等资源消耗情况。
 
 ![资源监控](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/performance.png)
+

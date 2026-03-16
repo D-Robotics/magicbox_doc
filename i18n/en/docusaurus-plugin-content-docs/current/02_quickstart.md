@@ -20,6 +20,20 @@ To avoid malfunction or damage to this product, please adhere to the following g
 - RDK X5 Magicbox with built-in 32GB TF card  
 - Cables: A-to-C ×1, C-to-C ×1  
 
+## System Flashing
+
+:::warning Note
+
+The RDK X5 Magicbox comes pre-installed with RDK OS by default. You can refer to the [Quick Start Guide Video](#quick-start-guide-video) to get started directly. If you need to reflash the system, follow the steps below to remove the SD card and proceed with system flashing.
+
+:::
+
+1. Use a screwdriver to unscrew the two screws securing the cover in a counterclockwise direction, then open the SD card cover.
+2. Remove the SD card to flash the system. For detailed flashing steps, refer to [System Flashing](https://developer.d-robotics.cc/rdk_doc/en/Quick_start/install_os/rdk_x5).
+3. After flashing is complete, reinsert the SD card into the SD card slot inside the Magicbox, reattach the cover, and tighten the two screws to secure it.
+
+    ![System Flashing](https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/sd_card_install_os.jpg)
+
 ## Quick Start Guide Video
 
 <video controls width="90%" preload="metadata">
