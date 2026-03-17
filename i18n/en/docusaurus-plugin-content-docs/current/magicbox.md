@@ -93,7 +93,7 @@ The D-Robotics RDK X5 Magicbox is a multimodal intelligent platform integrating 
           </tr>
           <tr>
           <td>BPU</td>
-          <td>1 x Bayers BPU, delivering 10 TOPS (INT8) computational performance</td>
+          <td>1 x Bayes BPU, delivering 10 TOPS (INT8) computational performance</td>
           </tr>
           <tr>
           <td>GPU</td>
@@ -125,7 +125,7 @@ The D-Robotics RDK X5 Magicbox is a multimodal intelligent platform integrating 
           </tr>
           <tr>
           <td>Power</td>
-          <td colspan="2">5V / 5A DC input via Type-C port<br/>Provides 5V and 3.3V external power outputs</td>
+          <td colspan="2">5V / 5A DC input via Type-C port</td>
           </tr>
       </tbody>
       </table>
@@ -250,7 +250,7 @@ The D-Robotics RDK X5 Magicbox is a multimodal intelligent platform integrating 
     <tbody>
       <tr>
         <td>RDK OS</td>
-        <td>Pre-installed RDK OS. To reflash, [click here](https://archive.d-robotics.cc/downloads/rdk_x5_magicbox/images/) to download the image. For the flashing steps, please refer to the [System Flashing](https://developer.d-robotics.cc/rdk_doc/en/Quick_start/install_os/rdk_x5#flashing-the-system) section using the RDK Studio and Rufus tools..</td>
+        <td>Pre-installed RDK OS, ready to use out of the box for an immediate hands-on experience.</td>
       </tr>
       <tr>
         <td>ROS</td>
@@ -266,3 +266,20 @@ The D-Robotics RDK X5 Magicbox is a multimodal intelligent platform integrating 
       </tr>
     </tbody>
   </table>
+
+## Purchase Channels
+
+<table>
+  <thead>
+    <tr align="left">
+      <th>Sales Channel</th>
+      <th>Purchase Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Junpeng Electronic</td>
+      <td><a href="https://detail.tmall.com/item.htm?id=1031179821030" target="_blank">Click to Buy</a></td>
+    </tr>
+  </tbody>
+</table>

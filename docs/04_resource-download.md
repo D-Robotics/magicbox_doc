@@ -17,6 +17,11 @@ sidebar_position: 4
     </thead>
     <tbody>
       <tr>
+        <td><a href="https://archive.d-robotics.cc/downloads/hardware/rdk_x5/rdk_x5_magicbox/d_robotics_rdk_x5_magicbox_zh_v1_0.pdf">产品规格书</a></td>
+        <td>1.0</td>
+        <td>产品规格书，供参考设计使用。</td>
+      </tr>
+      <tr>
         <td><a href="https://archive.d-robotics.cc/downloads/hardware/rdk_x5/rdk_x5_magicbox/schematic_led_board_2026-02-10.pdf">灯珠板原理图</a></td>
         <td>1.0</td>
         <td>灯珠板的原理图，供参考设计使用。</td>
@@ -25,6 +30,21 @@ sidebar_position: 4
         <td><a href="https://archive.d-robotics.cc/downloads/hardware/rdk_x5/rdk_x5_magicbox/schematic_rdk-x5_adapter_board_2026-02-10.pdf">RDK X5 转接板原理图</a></td>
         <td>1.0</td>
         <td>RDK X5 转接板的原理图，供参考设计使用。</td>
+      </tr>
+      <tr>
+        <td><a href="https://archive.d-robotics.cc/downloads/hardware/rdk_x5/rdk_x5_magicbox/magic_box_2D.dwg">2D 结构图纸</a></td>
+        <td>-</td>
+        <td>2D 结构图纸，供参考设计使用。</td>
+      </tr>
+      <tr>
+        <td><a href="https://archive.d-robotics.cc/downloads/hardware/rdk_x5/rdk_x5_magicbox/magic_box.zip">高清渲染图</a></td>
+        <td>-</td>
+        <td>高清渲染图。</td>
+      </tr>
+      <tr>
+        <td><a href="https://archive.d-robotics.cc/downloads/hardware/rdk_x5/rdk_x5_magicbox/20260226_magic_box.7z">高清实物图</a></td>
+        <td>-</td>
+        <td>高清实物图。</td>
       </tr>
     </tbody>
   </table>

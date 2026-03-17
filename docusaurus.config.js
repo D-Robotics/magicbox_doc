@@ -36,8 +36,7 @@ const config = {
     },
     // Dify Chatbot Configuration
     {
-      src: "data:text/javascript,window.difyChatbotConfig={token:'MltLQTHPb5EeP7uz',baseUrl:'https://rdk.d-robotics.cc',inputs:{},systemVariables:{},userVariables:{}};",
-      defer: false,
+      src: "/rdk_doc/js/dify-config.js",
     },
     {
       src: "https://rdk.d-robotics.cc/embed.min.js",
