@@ -8,6 +8,12 @@ The D-Robotics RDK X5 Magicbox is a multimodal intelligent platform integrating 
 
 ![Product View](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/product4.PNG)
 
+:::tip **Sales Channels**
+
+- **JUNROC:** [Click to purchase](https://detail.tmall.com/item.htm?id=1031179821030)
+- **YAHBOOM:** [Click to purchase](https://detail.tmall.com/item.htm?id=1032993461059)
+:::
+
 ## Physical Structure
 ![Physical Structure Diagram](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Physical-Structure-Diagram.png)
 
