@@ -5,12 +5,12 @@ sidebar_position: 4
 # 4. 资源下载
 
 ## 硬件资料
-
+ 
 
   <table>
     <thead>
       <tr>
-        <th>下载链接</th>
+        <th align="left">下载链接</th>
         <th>版本</th>
         <th>说明</th>
       </tr>
@@ -55,14 +55,14 @@ sidebar_position: 4
   <table>
     <thead>
       <tr>
-        <th>下载链接</th>
+        <th align="left">下载链接</th>
         <th>说明</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><a href="https://archive.d-robotics.cc/downloads/rdk_x5_magicbox/images/">RDK OS</a></td>
-        <td>RDK OS 镜像</td>
+        <td>RDK OS 镜像。</td>
       </tr>
     </tbody>
   </table>
@@ -72,7 +72,7 @@ sidebar_position: 4
   <table>
     <thead>
       <tr>
-        <th>下载链接</th>
+        <th align="left" width="15%">下载链接</th>
         <th>说明</th>
       </tr>
     </thead>

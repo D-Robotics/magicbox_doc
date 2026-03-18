@@ -7,7 +7,7 @@ sidebar_position: 8
 
   <table>
     <thead>
-      <tr>
+      <tr align="left">
         <th>RDK OS</th>
         <th>版本</th>
         <th>日期</th>

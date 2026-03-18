@@ -10,7 +10,7 @@ sidebar_position: 4
   <table>
     <thead>
       <tr>
-        <th>Download Link</th>
+        <th align="left">Download Link</th>
         <th>Version</th>
         <th>Description</th>
       </tr>
@@ -55,7 +55,7 @@ sidebar_position: 4
   <table>
     <thead>
       <tr>
-        <th>Download Link</th>
+        <th align="left">Download Link</th>
         <th>Description</th>
       </tr>
     </thead>
@@ -73,7 +73,7 @@ sidebar_position: 4
   <table>
     <thead>
       <tr>
-        <th>Download Link</th>
+        <th align="left">Download Link</th>
         <th>Description</th>
       </tr>
     </thead>

@@ -6,6 +6,8 @@ sidebar_position: 2
 
 ## Precautions
 
+:::warning Caution
+
 To avoid malfunction or damage to this product, please adhere to the following guidelines:
 - Place the product on a stable, flat, and non-conductive surface during use.
 - Do not arbitrarily move the swing arm; always return it to its initial position parallel to the housing before use.
@@ -15,84 +17,113 @@ To avoid malfunction or damage to this product, please adhere to the following g
 - Damage caused by connecting incompatible devices to this product will not be covered under warranty or repair support.
 - All peripheral devices used with this product must comply with relevant standards in the country of use and be clearly marked to ensure they meet safety and performance requirements.
 
+:::
+
 ## Package Contents
 
 - RDK X5 Magicbox with built-in 32GB TF card  
-- Cables: A-to-C ×1, C-to-C ×1  
+- Cables: 
+  - USB‑A to USB‑C Data Cable ×1
+  - USB‑C to USB‑C Data Cable ×1 
 
 ## System Flashing
 
 :::warning Note
 
-The RDK X5 Magicbox comes pre-installed with RDK OS by default. You can refer to the [Quick Start Guide Video](#quick-start-guide-video) to get started directly. If you need to reflash the system, follow the steps below to remove the SD card and proceed with system flashing.
+The RDK X5 Magicbox comes pre-installed with RDK OS by default. You can refer to the [Quick Start Guide Video](#quick-start-guide-video) to get started directly.  
+ If you need to reflash the system, follow the steps below to remove the TF card and proceed with system flashing.
 
 :::
 
-1. Use a screwdriver to unscrew the two screws securing the cover in a counterclockwise direction, then open the SD card cover.
-2. Remove the SD card to flash the system. For detailed flashing steps, refer to [System Flashing](https://developer.d-robotics.cc/rdk_doc/en/Quick_start/install_os/rdk_x5).
-3. After flashing is complete, reinsert the SD card into the SD card slot inside the Magicbox, reattach the cover, and tighten the two screws to secure it.
+1. Use a screwdriver to unscrew the two screws securing the cover in a counterclockwise direction, then open the TF card cover.
+2. Remove the TF card to flash the system. For detailed flashing steps, refer to [System Flashing](https://developer.d-robotics.cc/rdk_doc/en/Quick_start/install_os/rdk_x5).
+3. After flashing is complete, reinsert the TF card into the TF card slot inside the Magicbox, reattach the cover, and tighten the two screws to secure it.
 
-    ![System Flashing](https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/sd_card_install_os.jpg)
+    ![System Flashing](https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/sd_card_install_os-en.jpg)
 
 ## Quick Start Guide Video
 
-<video controls width="90%" preload="metadata">
+<video controls width="100%" preload="metadata">
   <source src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/magicbox-en.mp4" />
   Your browser does not support the video tag.
 </video>
 
 ## Power Supply
 
-- Type-C port, 5V/5A DC input  
-- Power the Magicbox using a power adapter that supports the PD 3.0 protocol via the power port.
+- Type-C port, 5V/5A DC input.  
+- Power the RDK X5 Magicbox using a power adapter that supports the PD 3.0 protocol via the power port.
 
 ## Network Configuration
 
 ### Method 1: QuickLink Configuration Instructions
 
 1. On your PC, navigate to **Control Panel → Network and Internet → Network and Sharing Center → Change adapter settings**.
-2. Connect your PC to the left-side Flash Link port on the Magicbox.
+2. Connect your PC to the left-side Flash Link port on the RDK X5 Magicbox.
 3. Locate the corresponding Ethernet adapter, right-click it, and select **Properties**.
 
     :::warning Note
     Please select the correct Ethernet adapter.
     :::
 
-    ![Select Ethernet](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Ethernet-Settings.png)
+    <!-- ![Select Ethernet](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Ethernet-Settings.png) -->
+    <img 
+      src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/Ethernet-Settings.png" 
+      style={{ width: '100%', height: 'auto' }}
+    />
 
 4. Find and double-click **Internet Protocol Version 4 (TCP/IPv4)**.
 
-    ![Select Internet Protocol Version 4](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Internet-Protocol-Version.png)
+    <!-- ![Select Internet Protocol Version 4](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Internet-Protocol-Version.png) -->
+    <img 
+      src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/Internet-Protocol-Version.png" 
+      style={{ width: '400px', height: 'auto' }}
+    />
 
 5. Enter the corresponding network parameters as shown in the image below, then click **OK**.
 
-    ![Configure Network Parameters](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Network-Parameter-Settings.png)
+    <!-- ![Configure Network Parameters](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Network-Parameter-Settings.png) -->
+    <img 
+      src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/Network-Parameter-Settings.png" 
+      style={{ width: '400px', height: 'auto' }}
+    />
 
 6. Open PowerShell and run the following command to verify connectivity to the development board: `ping 192.168.128.10`.
 
 ### Method 2: Wired Ethernet Port Configuration Instructions
 
 1. On your PC, navigate to **Control Panel → Network and Internet → Network and Sharing Center → Change adapter settings**.
-2. Connect your PC to the right-side Ethernet port on the Magicbox.
+2. Connect your PC to the right-side Ethernet port on the RDK X5 Magicbox.
 3. Locate the corresponding Ethernet adapter, right-click it, and select **Properties**.
 
     :::warning Note
     Please select the correct Ethernet adapter.
     :::
 
-    ![Select Ethernet](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Ethernet-Settings.png)
+    <!-- ![Select Ethernet](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Ethernet-Settings.png) -->
+    <img 
+      src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/Ethernet-Settings.png" 
+      style={{ width: '100%', height: 'auto' }}
+    />
 
 4. Find and double-click **Internet Protocol Version 4 (TCP/IPv4)**.
 
-    ![Select Internet Protocol Version 4](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Internet-Protocol-Version.png)
+    <!-- ![Select Internet Protocol Version 4](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Internet-Protocol-Version.png) -->
+    <img 
+      src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/Internet-Protocol-Version.png" 
+      style={{ width: '400px', height: 'auto' }}
+    />
 
 5. Enter the corresponding network parameters as shown in the image below, then click **OK**.
 
-    ![Configure Network Parameters](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Network-Parameter-Settings-ethernet.png)
+    <!-- ![Configure Network Parameters](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Network-Parameter-Settings-ethernet.png) -->
+    <img 
+      src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/Network-Parameter-Settings-ethernet.png" 
+      style={{ width: '400px', height: 'auto' }}
+    />
 
 6. Open PowerShell and run the following command to verify connectivity to the development board: `ping 192.168.127.10`.
 
-## Starting the Magicbox
+## Starting the RDK X5 Magicbox
 
 After powering on, wait approximately 50 seconds. The white LEDs will light up sequentially, and successful startup is indicated by the white LED blinking accompanied by a startup sound.
 
@@ -109,77 +140,99 @@ systemctl disable magicbox-start
 ```
 
 :::warning Note
-The directions of the buttons described in this article, from left to right, are based on the Magicbox light strip facing the user.
+The directions of the buttons described in this article, from left to right, are based on the RDK X5 Magicbox light strip facing the user.
 :::
 
 ### Stereo Depth Estimation
 
-Press the leftmost button—the indicator light turns red. When configuring the network using QuickLink, access http://192.168.128.10:8000 in your browser, When configuring the network using the wired Ethernet port, access http://192.168.127.10:8000 in your browser to view the effect.
+1. Briefly press the leftmost button, the light will turn red, and the binocular depth estimation algorithm will start.
 
-![Stereo Depth Estimation](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/Depth-Estimation.png)
+2. How to view the algorithm's effects:
+
+    - When using the flash connection to configure the network, access http://192.168.128.10:8000 via a browser.
+
+    - When using the wired network port to configure the network, access http://192.168.127.10:8000 via a browser.
+
+    ![Stereo Depth Estimation](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/Depth-Estimation.png)
 
 ### Gesture Interaction
 
-Press the middle button—the indicator light turns green. When configuring the network via QuickLink, access `http://192.168.128.10:8000` in your browser; when configuring via the wired Ethernet port, access `http://192.168.127.10:8000` in your browser to view the effects and interact.
+1. Briefly press the middle button, the light will turn green, and the gesture interaction algorithm will start.
 
-  <table>
-    <thead>
-      <tr>
-        <th>Gesture</th>
-        <th>Hand Motion</th>
-        <th>Triggered Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>ThumbUp</td>
-        <td>Thumbs-up</td>
-        <td>Ears wiggle</td>
-      </tr>
-      <tr>
-        <td>Victory</td>
-        <td>"V" sign</td>
-        <td>Feet lift up</td>
-      </tr>
-      <tr>
-        <td>ThumbLeft</td>
-        <td>Thumb points left</td>
-        <td>Left hand raises</td>
-      </tr>
-      <tr>
-        <td>ThumbRight</td>
-        <td>Thumb points right</td>
-        <td>Right hand raises</td>
-      </tr>
-      <tr>
-        <td>Okay</td>
-        <td>"OK" gesture</td>
-        <td>Lights flash</td>
-      </tr>
-    </tbody>
-  </table>
+2. Hand gestures and corresponding triggered actions:
 
+      <table>
+        <thead>
+          <tr align="left">
+            <th>Gesture</th>
+            <th>Hand Motion</th>
+            <th>Triggered Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ThumbUp</td>
+            <td>Thumbs-up</td>
+            <td>Ears wiggle</td>
+          </tr>
+          <tr>
+            <td>Victory</td>
+            <td>"V" sign</td>
+            <td>Feet lift up</td>
+          </tr>
+          <tr>
+            <td>ThumbLeft</td>
+            <td>Thumb points left</td>
+            <td>Left hand raises</td>
+          </tr>
+          <tr>
+            <td>ThumbRight</td>
+            <td>Thumb points right</td>
+            <td>Right hand raises</td>
+          </tr>
+          <tr>
+            <td>Okay</td>
+            <td>"OK" gesture</td>
+            <td>Lights flash</td>
+          </tr>
+        </tbody>
+      </table>
 
-![Gesture Interaction](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/Gesture.png)
+3. How to view the algorithm's effects:
+
+      - When using the flash connection to configure the network, access http://192.168.128.10:8000 via a browser.
+
+      - When using the wired network port to configure the network, access http://192.168.127.10:8000 via a browser.
+
+  
+      ![Gesture Interaction](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/Gesture.png)
 
 ### Voice Interaction
 
 :::warning Note
-  It is recommended to use in a quiet environment to avoid picking up ambient noise.
+It is recommended to use this feature in a relatively quiet environment; otherwise, it may easily pick up other sounds from the surroundings.
 :::
 
-Press the rightmost button—the indicator light turns blue. After hearing the voice prompt “你好，请问有什么可以帮助你的吗”, you may begin speaking.
+1. Briefly press the rightmost button, the light will turn blue, and after the voice prompt "Hello, how can I assist you?" appears, you can start a conversation.
 
-![Voice Interaction](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/audio-io.png)
+2. Voice commands:
 
-- **Voice Commands**:
-    - Say **“结束对话”** to put the Magicbox into sleep mode; the lights will switch to breathing mode.
-    - Say **“你好地瓜”** to wake it up; the lights will stay steadily lit, and you can start a conversation.
-    - Note that occasional misrecognition may occur.
+      - Use the voice command "End the conversation" to put the RDK X5Magicbox into sleep mode, and the light will switch to a breathing light pattern.
 
-- **Voice Interaction Workflow**:
-    - After receiving voice input, the microphone turns off, the blue LEDs gradually brighten one by one, and the speaker waits to play the large model’s response.
-    - Once audio playback finishes, the microphone reactivates, and the blue LEDs remain steadily lit, ready for the next round of basic interaction.
+      - Use the voice command "Hello, Digua" to wake it up, the light will remain steady, and you can start a conversation after waking up.
+    
+      :::warning
+      Please note that occasional recognition errors may occur.
+      :::
+
+3. Voice interaction process:
+
+      - After receiving voice input, the microphone turns off, the blue lights gradually brighten one by one, and the speaker waits to broadcast the output from the large model.
+
+      - Once the voice broadcast is complete, the microphone turns on, and the blue light remains steady without changes, ready for the next round of conversation.
+
+      ![Voice Interaction](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/audio-io.png)
+
 
 ### Explore More Examples with RDK Studio
 
@@ -187,6 +240,8 @@ Connect the Magicbox using the **RDK Studio** tool to experience additional exam
 
 ## Resource Monitoring
 
-The resource monitoring feature starts automatically upon power-up. When configuring the network via QuickLink, access `http://192.168.128.10:7999` in your browser; when configuring via the wired Ethernet port, access `http://192.168.127.10:7999` in your browser to view resource consumption such as CPU and BPU.
+After powering on, the self-starting resource monitoring function allows you to check the resource consumption of the CPU, BPU, etc. The viewing methods are as follows:
+- When using a flash connection to configure the network, access http://192.168.128.10:7999 via a browser.
+- When using a wired network port to configure the network, access http://192.168.127.10:7999 via a browser.
 
-![Resource Monitoring](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/performance.png)
+![Resource Monitoring](https://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/performance.png)
