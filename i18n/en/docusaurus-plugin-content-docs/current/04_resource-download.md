@@ -10,12 +10,17 @@ sidebar_position: 4
   <table>
     <thead>
       <tr>
-        <th>Download Link</th>
+        <th align="left">Download Link</th>
         <th>Version</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <td><a href="https://archive.d-robotics.cc/downloads/hardware/rdk_x5/rdk_x5_magicbox/d_robotics_rdk_x5_magicbox_en_v1_0.pdf">Product Specification</a></td>
+        <td>1.0</td>
+        <td>Product specification for reference design use.</td>
+      </tr>
       <tr>
         <td><a href="https://archive.d-robotics.cc/downloads/hardware/rdk_x5/rdk_x5_magicbox/schematic_led_board_2026-02-10.pdf">LED Board Schematic</a></td>
         <td>1.0</td>
@@ -26,6 +31,21 @@ sidebar_position: 4
         <td>1.0</td>
         <td>Schematic diagram of the RDK X5 adapter board, provided for reference in design.</td>
       </tr>
+      <tr>
+        <td><a href="https://archive.d-robotics.cc/downloads/hardware/rdk_x5/rdk_x5_magicbox/magic_box_2D.dwg">2D Structural Drawing</a></td>
+        <td>-</td>
+        <td>2D structural drawing for reference design.</td>
+      </tr>
+      <tr>
+        <td><a href="https://archive.d-robotics.cc/downloads/hardware/rdk_x5/rdk_x5_magicbox/magic_box.zip">High-definition Rendering</a></td>
+        <td>-</td>
+        <td>High-definition rendering.</td>
+      </tr>
+      <tr>
+        <td><a href="https://archive.d-robotics.cc/downloads/hardware/rdk_x5/rdk_x5_magicbox/20260226_magic_box.7z">High-definition Physical Image</a></td>
+        <td>-</td>
+        <td>High-definition physical image.</td>
+      </tr>
     </tbody>
   </table>
 
@@ -35,7 +55,7 @@ sidebar_position: 4
   <table>
     <thead>
       <tr>
-        <th>Download Link</th>
+        <th align="left">Download Link</th>
         <th>Description</th>
       </tr>
     </thead>
@@ -53,7 +73,7 @@ sidebar_position: 4
   <table>
     <thead>
       <tr>
-        <th>Download Link</th>
+        <th align="left">Download Link</th>
         <th>Description</th>
       </tr>
     </thead>

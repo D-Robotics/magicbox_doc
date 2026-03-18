@@ -29,22 +29,21 @@ const config = {
   onBrokenMarkdownLinks: "warn",
 
   //add vy xgs for analysis
-  scripts: [
-    {
-      src: "https://hm.baidu.com/hm.js?24dd63cad43b63889ea6bede5fd1ab9e",
-      async: true,
-    },
-    // Dify Chatbot Configuration
-    {
-      src: "data:text/javascript,window.difyChatbotConfig={token:'MltLQTHPb5EeP7uz',baseUrl:'https://rdk.d-robotics.cc',inputs:{},systemVariables:{},userVariables:{}};",
-      defer: false,
-    },
-    {
-      src: "https://rdk.d-robotics.cc/embed.min.js",
-      id: "MltLQTHPb5EeP7uz",
-      defer: true,
-    },
-  ],
+  // scripts: [
+  //   {
+  //     src: "https://hm.baidu.com/hm.js?24dd63cad43b63889ea6bede5fd1ab9e",
+  //     async: true,
+  //   },
+  //   // Dify Chatbot Configuration
+  //   {
+  //     src: "/magicbox_doc/js/dify-config.js",
+  //   },
+  //   {
+  //     src: "https://rdk.d-robotics.cc/embed.min.js",
+  //     id: "MltLQTHPb5EeP7uz",
+  //     defer: true,
+  //   },
+  // ],
 
   // add by xgs for translate
   i18n: {

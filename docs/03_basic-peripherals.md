@@ -50,7 +50,7 @@ python3 /userdata/magicbox/basic_function_demo/servo.py
 
 ```python
 # 控制设备灯光亮起，呈现不同颜色，基于SPI实现
-python3 python3 /userdata/magicbox/basic_function_demo/ws2812b.py
+python3 /userdata/magicbox/basic_function_demo/ws2812b.py
 ```
 
 ![图片](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/light.png)

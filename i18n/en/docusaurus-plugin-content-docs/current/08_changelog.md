@@ -6,7 +6,7 @@ sidebar_position: 8
 
   <table>
     <thead>
-      <tr>
+      <tr align="left">
         <th>RDK OS</th>
         <th>Version</th>
         <th>Date</th>

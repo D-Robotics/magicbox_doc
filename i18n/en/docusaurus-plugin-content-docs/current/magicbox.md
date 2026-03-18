@@ -8,8 +8,8 @@ The D-Robotics RDK X5 Magicbox is a multimodal intelligent platform integrating 
 
 ![Product View](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/product4.PNG)
 
-## Physical Structure
-![Physical Structure Diagram](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Physical-Structure-Diagram.png)
+## Topological Structure
+![Topological Structure Diagram](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Physical-Structure-Diagram.png)
 
 ## Interface, Button, and Indicator Light Description
 ![Interface, Button, and Indicator Light Diagram](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Interface-Description.png)
@@ -60,8 +60,21 @@ The D-Robotics RDK X5 Magicbox is a multimodal intelligent platform integrating 
         <td>Used to receive voice commands.</td>
       </tr>
       <tr>
-        <td>Function Buttons and Status LEDs</td>
-        <td>Power-on sequence:<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;White LEDs light up sequentially; wait approximately 50 seconds.<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;White LEDs blink accompanied by a sound effect: startup complete.<br/><br/>Function buttons: Launch preset demos. From left to right (facing the user):<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;Button 1: Launch stereo depth estimation (LED turns red).<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;Button 2: Launch gesture interaction (LED turns green).<br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;Button 3: Launch voice interaction (LED turns blue).</td>
+        <td>Function Buttons and Status Lights</td>
+        <td>
+              Status of the indicator light after power-on:
+              <ul>
+                <li>The white lights turn on sequentially, waiting for approximately 50 seconds.</li>
+                <li>The white lights flash accompanied by a sound effect: startup complete.</li>
+              </ul>
+              <br />
+              Function buttons and indicator light status: When the light strip faces the user, the functions of the buttons and the status of the indicator lights from left to right are as follows:
+              <ul>
+                <li>Button 1: Activates the binocular depth estimation function, and the light turns red.</li>
+                <li>Button 2: Activates the gesture interaction function, and the light turns green.</li>
+                <li>Button 3: Activates the voice interaction function, and the light turns blue.</li>
+              </ul>
+        </td>
       </tr>
     </tbody>
   </table>
@@ -89,11 +102,11 @@ The D-Robotics RDK X5 Magicbox is a multimodal intelligent platform integrating 
           </tr>
           <tr>
           <td>CPU</td>
-          <td>8 x 1.5GHz Arm® Cortex®-A55</td>
+          <td>8 x Arm Cortex-A55</td>
           </tr>
           <tr>
           <td>BPU</td>
-          <td>1 x Bayers BPU, delivering 10 TOPS (INT8) computational performance</td>
+          <td>1 x Bayes BPU, delivering 10 TOPS (INT8) computational performance</td>
           </tr>
           <tr>
           <td>GPU</td>
@@ -105,11 +118,22 @@ The D-Robotics RDK X5 Magicbox is a multimodal intelligent platform integrating 
           </tr>
           <tr>
           <td>Storage</td>
-          <td colspan="2">Onboard 1 Gbit NAND flash<br/>microSD card slot supporting UHS-I mode, pre-installed with a 32GB TF card</td>
+          <td colspan="2">
+            <ul>
+              <li>Onboard 1 Gbit NAND flash</li>
+              <li>microSD card slot supporting UHS-I mode</li>
+              <li>pre-installed with a 32GB TF card</li>
+            </ul>
+          </td>
           </tr>
           <tr>
           <td>Connectivity Interfaces</td>
-          <td colspan="2">4 x USB 3.0 Type-A (host)<br/>1 x USB 2.0 Type-C (device)</td>
+          <td colspan="2">
+            <ul>
+              <li>4 x USB 3.0 Type-A (host)</li>
+              <li>1 x USB 2.0 Type-C (device)</li>
+            </ul>
+          </td>
           </tr>
           <tr>
           <td>Display</td>
@@ -121,11 +145,18 @@ The D-Robotics RDK X5 Magicbox is a multimodal intelligent platform integrating 
           </tr>
           <tr>
           <td>Network Capability</td>
-          <td colspan="2">1 x RJ45 port supporting 10/100/1000 Mbps Gigabit Ethernet<br/>2.4/5 GHz dual-band Wi-Fi compliant with IEEE 802.11ax (Wi-Fi 6) standard<br/>Supports Bluetooth® 5.4 protocol<br/>Onboard high-performance antenna</td>
+          <td colspan="2">
+            <ul>
+              <li>1 x RJ45 port supporting 10/100/1000 Mbps Gigabit Ethernet</li>
+              <li>2.4/5 GHz dual-band Wi-Fi compliant with IEEE 802.11ax (Wi-Fi 6) standard</li>
+              <li>Supports Bluetooth® 5.4 protocol</li>
+              <li>Onboard high-performance antenna</li>
+            </ul>
+          </td>
           </tr>
           <tr>
           <td>Power</td>
-          <td colspan="2">5V / 5A DC input via Type-C port<br/>Provides 5V and 3.3V external power outputs</td>
+          <td colspan="2">5V / 5A DC input via Type-C port</td>
           </tr>
       </tbody>
       </table>
@@ -250,7 +281,7 @@ The D-Robotics RDK X5 Magicbox is a multimodal intelligent platform integrating 
     <tbody>
       <tr>
         <td>RDK OS</td>
-        <td>Pre-installed RDK OS. To reflash, [click here](https://archive.d-robotics.cc/downloads/rdk_x5_magicbox/images/) to download the image. For the flashing steps, please refer to the [System Flashing](https://developer.d-robotics.cc/rdk_doc/en/Quick_start/install_os/rdk_x5#flashing-the-system) section using the RDK Studio and Rufus tools..</td>
+        <td>Pre-installed RDK OS, ready to use out of the box for an immediate hands-on experience.</td>
       </tr>
       <tr>
         <td>ROS</td>
@@ -266,3 +297,29 @@ The D-Robotics RDK X5 Magicbox is a multimodal intelligent platform integrating 
       </tr>
     </tbody>
   </table>
+
+<style>
+{`
+/* 针对表格内的无序列表重置样式 */
+table ul {
+    /* 移除默认缩进（核心：消除二级缩进） */
+    padding-left: 20px; /* 一级列表标准缩进，可根据需求调整 */
+    margin: 0;          /* 移除默认外边距 */
+    list-style-type: disc; /* 强制显示一级列表的实心圆点（默认就是，可显式声明） */
+}
+table li {
+    /* 移除li的默认额外缩进 */
+    margin: 0;
+    padding: 0;
+}
+/* 可选：美化表格，方便查看效果 */
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 20px;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}`}
+</style>
