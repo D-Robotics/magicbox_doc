@@ -67,7 +67,7 @@ The RDK X5 Magicbox comes pre-installed with RDK OS by default. You can refer to
 
     <!-- ![Select Ethernet](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Ethernet-Settings.png) -->
     <img 
-      src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/Ethernet-Settings.png" 
+      src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Ethernet-Settings.png" 
       style={{ width: '100%', height: 'auto' }}
     />
 
@@ -75,7 +75,7 @@ The RDK X5 Magicbox comes pre-installed with RDK OS by default. You can refer to
 
     <!-- ![Select Internet Protocol Version 4](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Internet-Protocol-Version.png) -->
     <img 
-      src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/Internet-Protocol-Version.png" 
+      src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Internet-Protocol-Version.png" 
       style={{ width: '400px', height: 'auto' }}
     />
 
@@ -83,7 +83,7 @@ The RDK X5 Magicbox comes pre-installed with RDK OS by default. You can refer to
 
     <!-- ![Configure Network Parameters](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Network-Parameter-Settings.png) -->
     <img 
-      src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/Network-Parameter-Settings.png" 
+      src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Network-Parameter-Settings.png" 
       style={{ width: '400px', height: 'auto' }}
     />
 
@@ -101,7 +101,7 @@ The RDK X5 Magicbox comes pre-installed with RDK OS by default. You can refer to
 
     <!-- ![Select Ethernet](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Ethernet-Settings.png) -->
     <img 
-      src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/Ethernet-Settings.png" 
+      src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Ethernet-Settings.png" 
       style={{ width: '100%', height: 'auto' }}
     />
 
@@ -109,7 +109,7 @@ The RDK X5 Magicbox comes pre-installed with RDK OS by default. You can refer to
 
     <!-- ![Select Internet Protocol Version 4](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Internet-Protocol-Version.png) -->
     <img 
-      src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/Internet-Protocol-Version.png" 
+      src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Internet-Protocol-Version.png" 
       style={{ width: '400px', height: 'auto' }}
     />
 
@@ -117,7 +117,7 @@ The RDK X5 Magicbox comes pre-installed with RDK OS by default. You can refer to
 
     <!-- ![Configure Network Parameters](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Network-Parameter-Settings-ethernet.png) -->
     <img 
-      src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/Network-Parameter-Settings-ethernet.png" 
+      src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Network-Parameter-Settings-ethernet.png" 
       style={{ width: '400px', height: 'auto' }}
     />
 
@@ -210,7 +210,10 @@ The directions of the buttons described in this article, from left to right, are
 ### Voice Interaction
 
 :::warning Note
-It is recommended to use this feature in a relatively quiet environment; otherwise, it may easily pick up other sounds from the surroundings.
+
+- It is recommended to use this feature in a relatively quiet environment; otherwise, it may easily pick up other sounds from the surroundings.
+- Currently, only Chinese interaction is supported.
+
 :::
 
 1. Briefly press the rightmost button, the light will turn blue, and after the voice prompt "Hello, how can I assist you?" appears, you can start a conversation.
@@ -222,7 +225,7 @@ It is recommended to use this feature in a relatively quiet environment; otherwi
       - Use the voice command "Hello, Digua" to wake it up, the light will remain steady, and you can start a conversation after waking up.
     
       :::warning
-      Please note that occasional recognition errors may occur.
+      Due to differences in external environments and language habits, occasional recognition errors may occur.
       :::
 
 3. Voice interaction process:

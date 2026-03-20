@@ -4,16 +4,26 @@ sidebar_position: 1
 
 # 1. Product Overview
 
-The D-Robotics RDK X5 Magicbox is a multimodal intelligent platform integrating vision, hearing, and motion. Powered by the high-performance computing core RDK X5, it integrates a stereo camera, ring-shaped LED light strip, microphone, speaker, and multifunctional movable support legs, enabling natural interaction experiences of "seeing, hearing, speaking, and moving." Whether used for teaching and research, creative development, or intelligent interactive demonstrations, the RDK X5 Magicbox helps users quickly embark on their exploration journey into multimodal artificial intelligence.
+D-Robotics RDK X5 Magicbox is a multimodal intelligent platform that integrates vision, hearing, and kinesthetics. Powered by the high-performance computing core RDK X5, it features a binocular camera, a ring light strip, a microphone, a speaker, and a multifunctional movable arm, enabling a natural interaction experience of "seeing, hearing, speaking, and moving." Whether used for teaching and research, creative development, or intelligent interaction demonstrations, the RDK X5 Magicbox helps users quickly embark on their journey of exploring multimodal artificial intelligence.
 
 ![Product View](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/product4.PNG)
+<!-- 
+:::tip **Sales Channels**
+
+- **JUNROC:** [Click to purchase](https://detail.tmall.com/item.htm?id=1031179821030)
+- **YAHBOOM:** [Click to purchase](https://detail.tmall.com/item.htm?id=1032993461059)
+
+::: -->
 
 ## Topological Structure
-![Topological Structure Diagram](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Physical-Structure-Diagram.png)
+![Topological Structure Diagram](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Physical-Structure-Diagram.png.png)
 
 ## Interface, Button, and Indicator Light Description
-![Interface, Button, and Indicator Light Diagram](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Interface-Description.png)
 
+<img 
+  src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Interface-Description.png" 
+  style={{ width: 'auto', height: 'auto', align:'center'}}
+/>
 
   <table>
     <thead>
@@ -83,7 +93,7 @@ The D-Robotics RDK X5 Magicbox is a multimodal intelligent platform integrating 
 
 ### Technical Specifications
 
-- **RDK X5 8G Main Controller**
+#### RDK X5 8G Main Controller
 
     The D-Robotics RDK™ X5 is powered by the D-Robotics Sunrise™ 5 intelligent computing chip, delivering up to 10 TOPS of computational performance. It is a versatile development kit designed for intelligent computing and robotics applications, featuring rich interfaces and exceptional ease of use. It supports complex models and cutting-edge algorithms such as Transformer, RWKV, Occupancy, and Stereo Perception, accelerating the rapid deployment of intelligent applications.
 
@@ -161,7 +171,7 @@ The D-Robotics RDK X5 Magicbox is a multimodal intelligent platform integrating 
       </tbody>
       </table>
 
-- **Integrated D-Robotics Stereo Camera: RDK Stereo Camera GS130WI**
+#### Integrated D-Robotics Stereo Camera: RDK Stereo Camera GS130WI
 
     The RDK™ Stereo Camera GS130WI is a MIPI-interface-based stereo depth camera equipped with dual SC132GS global shutter image sensors and an ICM-42688-P 6-axis IMU, supporting synchronized stereo exposure and external triggering. With a 70 mm baseline, a per-channel resolution of 1280×1080, and a maximum frame rate of 120 fps, it features high dynamic range (HDR), high signal-to-noise ratio (40 dB), and enhanced near-infrared sensitivity at 850/940 nm, making it ideal for robotic vision, machine vision inspection, and motion pose perception applications.
 
@@ -204,7 +214,7 @@ The D-Robotics RDK X5 Magicbox is a multimodal intelligent platform integrating 
         </tbody>
       </table>
 
-- **Servo Motor: PTK 7465 MG-D**
+#### Servo Motor: PTK 7465 MG-D
 
     The PTK 7465 MG-D servo integrates a high-voltage coreless motor and a high-precision positioner. Its high torque and ±180° operating angle suit diverse application scenarios. The aluminum alloy middle housing significantly enhances reliability and stability.
 
@@ -237,7 +247,7 @@ The D-Robotics RDK X5 Magicbox is a multimodal intelligent platform integrating 
       </table>
 
 
-- **Other Onboard Resources**
+#### Other Onboard Resources
 
     - 4 WS2812B programmable LEDs form the status light, supporting 24-bit full-color display.
     - Equipped with 1 microphone, 1 speaker, and 3 customizable function buttons.
