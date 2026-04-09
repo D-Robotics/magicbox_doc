@@ -7,6 +7,17 @@ sidebar_position: 1
 D-Robotics RDK X5 Magicbox is a multimodal intelligent platform that integrates vision, hearing, and kinesthetics. Powered by the high-performance computing core RDK X5, it features a binocular camera, a ring light strip, a microphone, a speaker, and a multifunctional movable arm, enabling a natural interaction experience of "seeing, hearing, speaking, and moving." Whether used for teaching and research, creative development, or intelligent interaction demonstrations, the RDK X5 Magicbox helps users quickly embark on their journey of exploring multimodal artificial intelligence.
 
 ![Product View](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/product4.PNG)
+
+<!-- > **Click ▶️ to start the ultimate experience journey of RDK X5 Magicbox!**
+
+<video controls width="100%" preload="metadata">
+  <source src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/intro-zh.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+<br/>
+<br/> -->
+
 <!-- 
 :::tip **Sales Channels**
 
