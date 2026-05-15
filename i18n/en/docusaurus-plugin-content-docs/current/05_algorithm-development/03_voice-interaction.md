@@ -6,7 +6,7 @@ sidebar_position: 3
 
 :::info Models and Repository Links
   - LLM Model: [Qwen2.5-1.5B](https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF)
-  - ASR Model: [SensorVoice](https://github.com/lovemefan/SenseVoice.cpp)
+  - ASR Model: [SenseVoice](https://github.com/lovemefan/SenseVoice.cpp)
   - TTS and KWS Models: [Sherpa-onnx](https://k2-fsa.github.io/sherpa/onnx/)
   - Audio Stream Processing: https://github.com/D-Robotics/magicbox_audio_io
   - Large Language Model: https://github.com/D-Robotics/magicbox_qwen_llm

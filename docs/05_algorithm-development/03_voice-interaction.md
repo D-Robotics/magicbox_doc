@@ -6,7 +6,7 @@ sidebar_position: 3
 
 :::info 模型及仓库地址
   - LLM 模型：[Qwen2.5-1.5B](https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF)
-  - ASR 模型：[SensorVoice](https://github.com/lovemefan/SenseVoice.cpp)
+  - ASR 模型：[SenseVoice](https://github.com/lovemefan/SenseVoice.cpp)
   - TTS 与 KWS 模型：[Sherpa-onnx](https://k2-fsa.github.io/sherpa/onnx/)
   - 语音流处理：https://github.com/D-Robotics/magicbox_audio_io
   - 大语言模型：https://github.com/D-Robotics/magicbox_qwen_llm
