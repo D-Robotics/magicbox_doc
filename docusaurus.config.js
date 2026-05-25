@@ -83,6 +83,13 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // Algolia Crawler：站点所有权验证（需出现在线上页面 <head> 中）
+      metadata: [
+        {
+          name: "algolia-site-verification",
+          content: "27705E568F4D031E",
+        },
+      ],
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       // ✅ 新增：支持 h2 ~ h5 add by xgs for table of contents
