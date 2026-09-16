@@ -6,6 +6,9 @@
 
 import { themes as prismThemes } from "prism-react-renderer";
 
+// 英文站静态资源挂在 /en/ 子路径下，埋点脚本 src 需带 locale 前缀，否则英文站 404
+const localePrefix = process.env.DOCUSAURUS_CURRENT_LOCALE === "en" ? "/en" : "";
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "RDK X5 Magicbox",
@@ -30,6 +33,23 @@ const config = {
   onBrokenMarkdownLinks: "warn",
 
   //add vy xgs for analysis
+  scripts: [
+    {
+      src: `/magicbox_doc${localePrefix}/js/umami-events.js`,
+      defer: true,
+    },
+  ],
+  headTags: [
+    {
+      tagName: "script",
+      attributes: {
+        defer: "defer",
+        src: "https://cloud.umami.is/script.js",
+        "data-website-id": "b0c771b8-947e-4fa4-8880-606ecab89c36",
+      },
+    },
+  ],
+  // 以下为历史配置（百度统计 / Dify 小助手），暂未启用，保留备查
   // scripts: [
   //   {
   //     src: "https://hm.baidu.com/hm.js?24dd63cad43b63889ea6bede5fd1ab9e",
