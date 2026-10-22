@@ -56,7 +56,7 @@ python3 /userdata/magicbox/basic_function_demo/servo.py
 ```
 
 ### Result Display
-![Image](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Steering-Gear.png)
+![Servo control result: the rocker arms lift the device](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Steering-Gear.png)
 
 ## Light Control
 
@@ -76,13 +76,13 @@ Use the following command to execute the built-in `ws2812b.py` script: It is use
 python3 /userdata/magicbox/basic_function_demo/ws2812b.py
 ```
 ### Result Display
-![Image](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/light.png)
+![Light control result: the LED beads light up in different colors](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/light.png)
 
 ## IMU Control
 
 ### Specifications
 
-The binocular camera comes with its own IMU. The RDK X5 MagicBox expansion board has a built-in IMU, model ICM20948.
+The binocular camera comes with its own IMU. The RDK X5 Magicbox expansion board has a built-in IMU, model ICM20948.
 
 ### IMU Communication Description
 - Communication with the onboard IMU is via I2C bus 5, using smbus2 to implement control logic.
@@ -97,7 +97,7 @@ python3 /userdata/magicbox/basic_function_demo/imu.py
 ```
 ### Result Display
 
-![Image](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/imu.png)
+![IMU data output](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/imu.png)
 
 ## Button Control
 
@@ -105,7 +105,7 @@ python3 /userdata/magicbox/basic_function_demo/imu.py
 
 - The button logic is implemented via GPIO, connected to BCM pins 22, 16, and 26. For detailed pin information, see [40PIN Pin Definitions](https://developer.d-robotics.cc/rdk_doc/en/Basic_Application/01_40pin_user_sample/40pin_define#40pin_define).
 
-        ![](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/button_PIN.png)
+        ![Button GPIO pin definitions](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/button_PIN.png)
 
 - Pressing the button triggers a low level, and `GPIO.FALLING` is used to detect the press event.
 - For details on GPIO usage and interface descriptions, please refer to the [GPIO Application Documentation](https://developer.d-robotics.cc/rdk_doc/en/Basic_Application/01_40pin_user_sample/gpio).

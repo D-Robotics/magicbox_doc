@@ -7,7 +7,7 @@ sidebar_position: 3
 :::info Models and Repository Links
   - LLM Model: [Qwen2.5-1.5B](https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF)
   - ASR Model: [SenseVoice](https://github.com/lovemefan/SenseVoice.cpp)
-  - TTS and KWS Models: [Sherpa-onnx](https://k2-fsa.github.io/sherpa/onnx/)
+  - TTS and KWS Models: [sherpa-onnx](https://k2-fsa.github.io/sherpa/onnx/)
   - Audio Stream Processing: https://github.com/D-Robotics/magicbox_audio_io
   - Large Language Model: https://github.com/D-Robotics/magicbox_qwen_llm
   - Lighting Control Library: https://github.com/D-Robotics/magicbox_lighting_control
@@ -25,11 +25,12 @@ Currently, only Chinese interaction is supported.
 2. In addition to the default continuous conversation mode, it also supports a continuous wake-up mode, i.e., "one wake-up, one conversation."
    - You can wake up the device by saying "Hello, Digua" to initiate a single conversation.
    - You can also directly start a conversation by saying "Hello, Digua + your question."
-3. After detecting "Hello Sweet Potato," the light will flash. You can enable or disable the continuous wake-up mode by modifying the `continuous_wake_mode` setting in `/userdata/magicbox/app/ros_ws/src/magicbox/magicbox_audio_io/launch/audio_io.launch.py`.  
+3. After detecting "Hello, Digua," the light will flash. You can enable or disable the continuous wake-up mode by modifying the `continuous_wake_mode` setting in `/userdata/magicbox/app/ros_ws/src/magicbox/magicbox_audio_io/launch/audio_io.launch.py`.  
    - How to set: Use the script launch command `ros2 launch audio_io audio_io.launch.py continuous_wake_mode:=true`.
 
              <img 
               src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/continuous_wake_mode.png" 
+              alt="continuous_wake_mode setting in audio_io.launch.py"
               style={{ width: '100%', height: 'auto' }}
              />
 
@@ -38,6 +39,7 @@ Currently, only Chinese interaction is supported.
 
           <img 
             src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/wait_for_llm.png" 
+            alt="wait_for_llm setting in audio_io.launch.py"
             style={{ width: '100%', height: 'auto' }}
           />
     
@@ -53,6 +55,7 @@ Currently, only Chinese interaction is supported.
     
         <img 
           src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/wait_for_audio.png" 
+          alt="wait_for_audio setting in qwen_llm.launch.py"
           style={{ width: '100%', height: 'auto' }}
         />
     
@@ -63,6 +66,7 @@ Currently, only Chinese interaction is supported.
       <!-- ![Functional Architecture Diagram](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/Audio-Architecture-Diagram.png) -->
       <img 
         src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Audio-Architecture-Diagram.png" 
+        alt="Voice interaction functional architecture diagram"
         style={{ width: '100%', height: 'auto' }}
       />
 
@@ -81,6 +85,7 @@ Currently, only Chinese interaction is supported.
     <!-- ![Output Result](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/audio_io.png) -->
     <img 
       src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/audio_io.png" 
+      alt="Audio stream processing output"
       style={{ width: '100%', height: 'auto' }}
     />
 
@@ -101,5 +106,6 @@ Currently, only Chinese interaction is supported.
     <!-- ![Output Result](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/qwen_llm.png) -->
     <img 
       src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/zh/qwen_llm.png" 
+      alt="Large language model startup output"
       style={{ width: '100%', height: 'auto' }}
     />

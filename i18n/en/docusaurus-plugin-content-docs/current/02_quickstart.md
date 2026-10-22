@@ -68,6 +68,7 @@ The RDK X5 Magicbox comes pre-installed with RDK OS by default. You can refer to
     <!-- ![Select Ethernet](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Ethernet-Settings.png) -->
     <img 
       src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Ethernet-Settings.png" 
+      alt="Select the Ethernet adapter"
       style={{ width: '100%', height: 'auto' }}
     />
 
@@ -76,6 +77,7 @@ The RDK X5 Magicbox comes pre-installed with RDK OS by default. You can refer to
     <!-- ![Select Internet Protocol Version 4](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Internet-Protocol-Version.png) -->
     <img 
       src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Internet-Protocol-Version.png" 
+      alt="Select Internet Protocol Version 4 (TCP/IPv4)"
       style={{ width: '400px', height: 'auto' }}
     />
 
@@ -84,6 +86,7 @@ The RDK X5 Magicbox comes pre-installed with RDK OS by default. You can refer to
     <!-- ![Configure Network Parameters](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Network-Parameter-Settings.png) -->
     <img 
       src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Network-Parameter-Settings.png" 
+      alt="Configure network parameters"
       style={{ width: '400px', height: 'auto' }}
     />
 
@@ -102,6 +105,7 @@ The RDK X5 Magicbox comes pre-installed with RDK OS by default. You can refer to
     <!-- ![Select Ethernet](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Ethernet-Settings.png) -->
     <img 
       src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Ethernet-Settings.png" 
+      alt="Select the Ethernet adapter"
       style={{ width: '100%', height: 'auto' }}
     />
 
@@ -110,6 +114,7 @@ The RDK X5 Magicbox comes pre-installed with RDK OS by default. You can refer to
     <!-- ![Select Internet Protocol Version 4](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Internet-Protocol-Version.png) -->
     <img 
       src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Internet-Protocol-Version.png" 
+      alt="Select Internet Protocol Version 4 (TCP/IPv4)"
       style={{ width: '400px', height: 'auto' }}
     />
 
@@ -118,6 +123,7 @@ The RDK X5 Magicbox comes pre-installed with RDK OS by default. You can refer to
     <!-- ![Configure Network Parameters](http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Network-Parameter-Settings-ethernet.png) -->
     <img 
       src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Network-Parameter-Settings-ethernet.png" 
+      alt="Configure network parameters for the Ethernet port"
       style={{ width: '400px', height: 'auto' }}
     />
 
@@ -220,7 +226,7 @@ The directions of the buttons described in this article, from left to right, are
 
 2. Voice commands:
 
-      - Use the voice command "End the conversation" to put the RDK X5Magicbox into sleep mode, and the light will switch to a breathing light pattern.
+      - Use the voice command "End the conversation" to put the RDK X5 Magicbox into sleep mode, and the light will switch to a breathing light pattern.
 
       - Use the voice command "Hello, Digua" to wake it up, the light will remain steady, and you can start a conversation after waking up.
     
