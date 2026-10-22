@@ -21,8 +21,8 @@ D-Robotics RDK X5 Magicbox is a multimodal intelligent platform that integrates 
 <!-- 
 :::tip **Sales Channels**
 
-- **JUNROC:** [Click to purchase](https://detail.tmall.com/item.htm?id=1031179821030)
-- **YAHBOOM:** [Click to purchase](https://detail.tmall.com/item.htm?id=1032993461059)
+- **JunRoc:** [Click to purchase](https://detail.tmall.com/item.htm?id=1031179821030)
+- **Yahboom:** [Click to purchase](https://detail.tmall.com/item.htm?id=1032993461059)
 
 ::: -->
 
@@ -33,6 +33,7 @@ D-Robotics RDK X5 Magicbox is a multimodal intelligent platform that integrates 
 
 <img 
   src="http://rdk-doc.oss-cn-beijing.aliyuncs.com/doc/img/magicbox/en/Interface-Description.png" 
+  alt="Interface, button, and indicator light locations on the RDK X5 Magicbox"
   style={{ width: 'auto', height: 'auto', align:'center'}}
 />
 
@@ -321,19 +322,19 @@ D-Robotics RDK X5 Magicbox is a multimodal intelligent platform that integrates 
 
 <style>
 {`
-/* 针对表格内的无序列表重置样式 */
+/* Reset list styles inside tables */
 table ul {
-    /* 移除默认缩进（核心：消除二级缩进） */
-    padding-left: 20px; /* 一级列表标准缩进，可根据需求调整 */
-    margin: 0;          /* 移除默认外边距 */
-    list-style-type: disc; /* 强制显示一级列表的实心圆点（默认就是，可显式声明） */
+    /* Remove the default indentation (this removes nested indentation) */
+    padding-left: 20px; /* Standard first-level list indent; adjust as needed */
+    margin: 0;          /* Remove the default outer margin */
+    list-style-type: disc; /* Force solid bullets for first-level lists (the default; declared explicitly) */
 }
 table li {
-    /* 移除li的默认额外缩进 */
+    /* Remove the extra default indentation on li elements */
     margin: 0;
     padding: 0;
 }
-/* 可选：美化表格，方便查看效果 */
+/* Optional: improve table appearance for easier preview */
 table {
     border-collapse: collapse;
     width: 80%;
