@@ -245,7 +245,7 @@ The directions of the buttons described in this article, from left to right, are
 
 ### Explore More Examples with RDK Studio
 
-Connect the Magicbox using the **RDK Studio** tool to experience additional example applications. For download, installation, and usage instructions, refer to the [RDK Studio User Guide](https://developer.d-robotics.cc/rdk_doc/en/RDK_Studio).
+Connect the Magicbox using the **RDK Studio** tool to experience additional example applications. For download, installation, and usage instructions, refer to the [RDK Studio User Guide](https://developer.d-robotics.cc/rdk_studio_doc/en/quick-start/install-and-login).
 
 ## Resource Monitoring
 

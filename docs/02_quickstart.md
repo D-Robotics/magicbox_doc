@@ -225,7 +225,7 @@ systemctl disable magicbox-start
 
 ### 使用 RDK Studio 体验更多示例
 
-使用 RDK Studio 工具连接 Magicbox， 可体验更多示例应用模块中的示例，下载安装及使用步骤参考 [RDK Studio 使用指南](https://developer.d-robotics.cc/rdk_doc/RDK_Studio) 。
+使用 RDK Studio 工具连接 Magicbox， 可体验更多示例应用模块中的示例，下载安装及使用步骤参考 [RDK Studio 使用指南](https://developer.d-robotics.cc/rdk_studio_doc/quick-start/install-and-login) 。
 
 ## 资源监控
 
