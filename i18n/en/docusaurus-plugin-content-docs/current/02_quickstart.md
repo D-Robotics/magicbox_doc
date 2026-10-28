@@ -228,7 +228,7 @@ The directions of the buttons described in this article, from left to right, are
 
       - Use the voice command "End the conversation" to put the RDK X5 Magicbox into sleep mode, and the light will switch to a breathing light pattern.
 
-      - Use the voice command "Hello, Digua" to wake it up, the light will remain steady, and you can start a conversation after waking up.
+      - Use the voice command "你好地瓜" (Hello, D-Robotics) to wake it up, the light will remain steady, and you can start a conversation after waking up.
     
       :::warning
       Due to differences in external environments and language habits, occasional recognition errors may occur.

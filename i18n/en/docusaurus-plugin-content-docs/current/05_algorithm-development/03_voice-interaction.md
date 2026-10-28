@@ -23,9 +23,9 @@ Currently, only Chinese interaction is supported.
 
 1. For instructions on using the voice interaction feature, refer to [Quick Start Voice Interaction](../02_quickstart.md#voice-interaction).
 2. In addition to the default continuous conversation mode, it also supports a continuous wake-up mode, i.e., "one wake-up, one conversation."
-   - You can wake up the device by saying "Hello, Digua" to initiate a single conversation.
-   - You can also directly start a conversation by saying "Hello, Digua + your question."
-3. After detecting "Hello, Digua," the light will flash. You can enable or disable the continuous wake-up mode by modifying the `continuous_wake_mode` setting in `/userdata/magicbox/app/ros_ws/src/magicbox/magicbox_audio_io/launch/audio_io.launch.py`.  
+   - You can wake up the device by saying "你好地瓜" (Hello, D-Robotics) to initiate a single conversation.
+   - You can also directly start a conversation by saying "你好地瓜" (Hello, D-Robotics) followed by your question.
+3. After detecting "你好地瓜" (Hello, D-Robotics), the light will flash. You can enable or disable the continuous wake-up mode by modifying the `continuous_wake_mode` setting in `/userdata/magicbox/app/ros_ws/src/magicbox/magicbox_audio_io/launch/audio_io.launch.py`.  
    - How to set: Use the script launch command `ros2 launch audio_io audio_io.launch.py continuous_wake_mode:=true`.
 
              <img 
