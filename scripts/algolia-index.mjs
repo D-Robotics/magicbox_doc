@@ -11,6 +11,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import * as cheerio from "cheerio";
 import { config as loadDotenv } from "dotenv";
+import { writeEasyopsIndex } from "./easyops-index.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
@@ -219,6 +220,8 @@ function isIndexablePageUrl(href) {
   }
   if (/\/(assets|img|static|_next)\//i.test(url.pathname)) return false;
   if (/\/search\/?$/i.test(url.pathname)) return false;
+  // Docusaurus 脚手架残留页，不在任何侧边栏里，不该进搜索索引。
+  if (/\/markdown-page\/?$/i.test(url.pathname)) return false;
   return true;
 }
 
@@ -604,6 +607,13 @@ async function main() {
   if (!records.length) {
     throw new Error("No records extracted; aborting without clearing index");
   }
+
+  // 一爬两出：同一批 records 既推 Algolia，也产一份 MCP 读取的本地索引。
+  // 先写文件，Algolia 上传失败时仍可人工上传索引。
+  writeEasyopsIndex(
+    records,
+    path.join(rootDir, "scripts", "_algolia_tmp", "search-index.json"),
+  );
 
   await ensureIndexSettings();
   await clearIndex();
