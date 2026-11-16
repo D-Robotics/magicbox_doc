@@ -106,7 +106,7 @@ const config = {
       }),
     ],
   ],
-  plugins: [],
+  plugins: ['@d-robotics/docusaurus-plugin-guaji', ],
   markdown: {
     mermaid: true,
   },
