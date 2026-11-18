@@ -13,7 +13,8 @@ name: Check external links
 #   - --exclude '.hobot.cc'：境外 runner 连不上（Connection failed、非 404），GitHub 上无信号可采，
 #     本机实测 200 正常；China 侧可达性校验另议。
 # --accept 里的 412/429/530：反爬/限流/异常状态码（服务器有响应、资源存在），非 404，视为可达。
-# --max-concurrency 16：限制单仓并发（lychee 默认 128），避免把自家域名打出 timeout。
+# --max-concurrency 8：限制单仓并发（lychee 默认 128）。实测 16 并发会把 archive.d-robotics.cc
+#   打成 504（同一文件本机/全球探针均 200），降到 8 后仍偶发，所以后面还加了串行复检。
 # 注意不能用 --include '^https?://' 做白名单：lychee 里 include 一旦匹配会覆盖 exclude。
 
 on:
@@ -40,7 +41,7 @@ jobs:
           fail: false
           args: >-
             --no-progress
-            --max-concurrency 16
+            --max-concurrency 8
             --scheme http
             --scheme https
             --root-dir ${{ github.workspace }}
@@ -57,6 +58,91 @@ jobs:
             'docs/**/*.mdx'
             'i18n/en/docusaurus-plugin-content-docs/current/**/*.md'
             'i18n/en/docusaurus-plugin-content-docs/current/**/*.mdx'
+
+      # 串行复检：lychee 首轮报的 Errors 里混着境外 runner 到国内站点的链路抖动（典型是
+      # archive.d-robotics.cc 的 504，或同一 URL 第二次出现时的 "Error (cached)"）。
+      # 这里把 Errors 段里的每条 URL 逐条重查（一次一条、间隔 1 秒），复检通过就移出 Errors，
+      # 单列到「复检通过（环境噪声）」。真 404、证书过期、对方站点真挂了复检仍失败，不会被放过。
+      - name: Recheck failed links serially
+        env:
+          UA: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        run: |
+          python3 - <<'PY'
+          import os, re, subprocess, time
+
+          REPORT = "./lychee/out.md"
+          UA = os.environ["UA"]
+          ACCEPT = {200, 204, 206, 301, 302, 307, 308, 401, 403, 412, 429, 530}
+
+          if not os.path.exists(REPORT):
+              raise SystemExit(0)
+
+          lines = open(REPORT, encoding="utf-8").read().split("\n")
+          try:
+              start = next(i for i, l in enumerate(lines) if l.strip() == "## Errors per input")
+          except StopIteration:
+              raise SystemExit(0)
+          end = next((i for i in range(start + 1, len(lines)) if lines[i].startswith("## ")), len(lines))
+
+          url_re = re.compile(r"<([^>]+)>")
+          code_re = re.compile(r"\[(\w+)\]")
+
+          def recheck(url):
+              out = subprocess.run(
+                  ["curl", "-sS", "-o", "/dev/null", "-L", "--max-time", "30",
+                   "-A", UA, "-w", "%{http_code}", url],
+                  capture_output=True, text=True).stdout.strip()
+              time.sleep(1)
+              return out
+
+          kept_groups, moved, checked = [], [], 0
+          i = start + 1
+          while i < end:
+              if not lines[i].startswith("### Errors in"):
+                  i += 1
+                  continue
+              group = [lines[i]]
+              i += 1
+              while i < end and not lines[i].startswith("### "):
+                  group.append(lines[i])
+                  i += 1
+              kept = []
+              for g in group:
+                  m = url_re.search(g)
+                  if g.lstrip().startswith("* ") and m:
+                      checked += 1
+                      code = recheck(m.group(1))
+                      if code.isdigit() and int(code) in ACCEPT:
+                          old = code_re.search(g)
+                          loc = re.search(r"\(at [^)]+\)", g)
+                          moved.append((m.group(1), (old.group(1) if old else "?"), code,
+                                        loc.group(0) if loc else ""))
+                          continue
+                  kept.append(g)
+              if any(x.lstrip().startswith("* ") for x in kept):
+                  kept_groups.extend(kept)
+
+          real_errors = sum(1 for x in kept_groups if x.lstrip().startswith("* "))
+          lines[start:end] = (["## Errors per input", ""] + kept_groups) if kept_groups else []
+          for idx, l in enumerate(lines):
+              if l.startswith("| 🚫 Errors"):
+                  lines[idx] = re.sub(r"\|\s*\d+\s*\|", f"| {real_errors} |", l)
+                  break
+
+          if moved:
+              lines += ["", "## 复检通过（环境噪声，未计入失效）", "",
+                        "> lychee 首轮判失败，串行复检返回可接受状态码；多为境外 runner 到国内站点的链路抖动。", ""]
+              seen = set()
+              for url, old, new, loc in moved:
+                  key = (url, old, new)
+                  if key in seen:
+                      continue
+                  seen.add(key)
+                  lines.append(f"- `{old}→{new}` {url} {loc}".rstrip())
+
+          open(REPORT, "w", encoding="utf-8").write("\n".join(lines))
+          print(f"rechecked {checked}, moved to noise {len(moved)}, real errors {real_errors}")
+          PY
 
       - name: Create or update issue
         env:
